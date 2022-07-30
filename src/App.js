@@ -15,7 +15,7 @@ function App() {
     
   }
 
-  let updatedMs=time.ms, updatedS=time.s, updatedM=time.m, updatedH=time.h;
+  let updatedMs=time.ms, updatedS=50, updatedM=59, updatedH=time.h;
   const run = ()=>{
     if(updatedM === 60){
        updatedH++;
@@ -39,11 +39,13 @@ function App() {
   }
 
   const reset = ()=>{
-
+     clearInterval(interv);
+     setStatus(0);
+     return setTime({ms:0, s:0, m:0, h:0})
   }
 
   const resume = ()=>{
-
+    start()
   }
   return (
     <div className="App">
@@ -51,7 +53,7 @@ function App() {
         <div className="clock-holder">
           <div className="stopwatch">
           <DisplayComponent time={time}/>
-            <BtnComponent stop={stop} status={status} start={start} resume={resume}/>
+            <BtnComponent stop={stop} status={status} start={start} resume={resume} reset={reset}/>
           </div>
         </div>
       </div>
