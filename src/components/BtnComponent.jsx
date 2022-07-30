@@ -1,8 +1,10 @@
 import React from 'react'
 
-const BtnComponent = () => {
+const BtnComponent = ({start}) => {
   return (
-    <div>BtnComponent</div>
+    <div>
+        <button onClick={start} className='stopwatch-btn stopwatch-btn-gre'>Start</button>
+    </div>
   )
 }
 
