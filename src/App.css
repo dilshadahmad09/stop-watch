@@ -1,5 +1,5 @@
 body {
-  background:#2C3E50;
+  background:#dae2eb;
 }
 
 * {
@@ -13,7 +13,7 @@ body {
   max-width: 600px;
   width: 90%;
   height: 500px;
-  margin: 30px auto;
+  margin: 100px auto;
 }
 
 .clock-holder {
