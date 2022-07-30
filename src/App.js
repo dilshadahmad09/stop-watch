@@ -1,10 +1,13 @@
 
 import './App.css';
+import BtnComponent from './components/BtnComponent';
+import DisplayComponent from './components/DisplayComponent';
 
 function App() {
   return (
     <div className="App">
-    Hello World
+    <DisplayComponent/>
+    <BtnComponent/>
     </div>
   );
 }
